@@ -1,0 +1,20 @@
+body{
+    margin: 0px;
+    background-image: linear-gradient(175deg, #0f9fff, #98ffb7);
+}
+header{
+    margin: 0px;
+    height: 200px;
+    font-size: 20px;
+    font-family: "Lato";
+    color: white;
+    text-align: center;
+}
+main{
+    margin: 0px;
+    min-height: calc(100vh - 430px);;
+}
+footer{
+    margin: 0px;
+    height: 200px;
+}
