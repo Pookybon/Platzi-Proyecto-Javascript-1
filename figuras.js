@@ -18,8 +18,11 @@ const areaTriangulo = (lado1Triangulo, lado2Triangulo, baseTriangulo) => {
     let semiPerimetro = (lado1Triangulo + lado2Triangulo + baseTriangulo)/2;
     return Math.sqrt(semiPerimetro * (semiPerimetro-lado1Triangulo) * (semiPerimetro-lado2Triangulo) * (semiPerimetro-baseTriangulo));
 };
-const alturaTriangulo = (areaTriangulo, baseTriangulo) => (2 * areaTriangulo) / baseTriangulo;
-console.log(`La base del triangulo mide ${baseTriangulo}cm, los lados ${lado1Triangulo}cm, ${lado2Triangulo}cm y la altura ${alturaTriangulo(areaTriangulo(lado1Triangulo, lado2Triangulo, baseTriangulo), baseTriangulo)}cm`);
+const alturaTriangulo = (lado1Triangulo, lado2Triangulo, baseTriangulo) => {
+    const area = areaTriangulo(lado1Triangulo, lado2Triangulo, baseTriangulo);
+    return (2 * area) / baseTriangulo;
+};
+console.log(`La base del triangulo mide ${baseTriangulo}cm, los lados ${lado1Triangulo}cm, ${lado2Triangulo}cm y la altura ${alturaTriangulo(lado1Triangulo, lado2Triangulo, baseTriangulo)}cm`);
 console.log(`El perimetro del triangulo es ${perimetroTriangulo(lado1Triangulo, lado2Triangulo, baseTriangulo)}cm`);
 console.log(`El area del triangulo es ${areaTriangulo(lado1Triangulo, lado2Triangulo, baseTriangulo)}cm^2`);
 console.groupEnd();
